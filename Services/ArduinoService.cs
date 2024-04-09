@@ -14,7 +14,7 @@ public class ArduinoService : IHostedService
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _serialPort = new SerialPort("/dev/cu.usbmodem101", 9600);
+        _serialPort = new SerialPort("/dev/ttyACM0", 9600);
         _serialPort.Open();
         _serialPort.DataReceived += SerialPort_DataReceived;
 
