@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NeMw9qdQf1q5M3aKCikEGqp1slHQX9u49iRQjp+inF2YPzJEHTaVreE6/YfD3sOzLF44sKjrrNkqOaSKO9uwTw==",
+  "dgSpecHash": "LZhqEoEEBFDii7uYcuz+xCdRRkcLu01pJNTK0/OWEdbo8PZEQtE86Xr9UJEvb6/0VC6/bEl4sQefASRnkcQjbA==",
   "success": true,
   "projectFilePath": "/Users/Julian.Codespoti/Desktop/Uni/IOT/IotAssignment/SmartMirror/SmartMirror.csproj",
   "expectedPackageFiles": [
@@ -52,9 +52,9 @@
     "/Users/Julian.Codespoti/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/Julian.Codespoti/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/Julian.Codespoti/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/Julian.Codespoti/.nuget/packages/microsoft.netcore.app.runtime.linux-arm64/8.0.0-preview.6.23329.7/microsoft.netcore.app.runtime.linux-arm64.8.0.0-preview.6.23329.7.nupkg.sha512",
-    "/Users/Julian.Codespoti/.nuget/packages/microsoft.netcore.app.host.linux-arm64/8.0.0-preview.6.23329.7/microsoft.netcore.app.host.linux-arm64.8.0.0-preview.6.23329.7.nupkg.sha512",
-    "/Users/Julian.Codespoti/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-arm64/8.0.0-preview.6.23329.11/microsoft.aspnetcore.app.runtime.linux-arm64.8.0.0-preview.6.23329.11.nupkg.sha512"
+    "/Users/Julian.Codespoti/.nuget/packages/microsoft.netcore.app.runtime.linux-arm/8.0.0-preview.6.23329.7/microsoft.netcore.app.runtime.linux-arm.8.0.0-preview.6.23329.7.nupkg.sha512",
+    "/Users/Julian.Codespoti/.nuget/packages/microsoft.netcore.app.host.linux-arm/8.0.0-preview.6.23329.7/microsoft.netcore.app.host.linux-arm.8.0.0-preview.6.23329.7.nupkg.sha512",
+    "/Users/Julian.Codespoti/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-arm/8.0.0-preview.6.23329.11/microsoft.aspnetcore.app.runtime.linux-arm.8.0.0-preview.6.23329.11.nupkg.sha512"
   ],
   "logs": []
 }
