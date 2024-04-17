@@ -51,7 +51,6 @@ public class ArduinoService : IHostedService
         {
             u = rule.UpdateInterval,
             t = rule.TemperatureThreshold,
-            m = rule.MotionEnabled
         });
 
         _serialPort.WriteLine(json);

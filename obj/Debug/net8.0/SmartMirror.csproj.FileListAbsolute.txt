@@ -82,3 +82,4 @@
 /Users/Julian.Codespoti/Desktop/Uni/IOT/IotAssignment/SmartMirror/bin/Debug/net8.0/runtimes/alpine-arm64/native/libe_sqlite3.so
 /Users/Julian.Codespoti/Desktop/Uni/IOT/IotAssignment/SmartMirror/bin/Debug/net8.0/runtimes/alpine-x64/native/libe_sqlite3.so
 /Users/Julian.Codespoti/Desktop/Uni/IOT/IotAssignment/SmartMirror/bin/Debug/net8.0/runtimes/browser-wasm/nativeassets/net7.0/e_sqlite3.a
+/Users/Julian.Codespoti/Desktop/Uni/IOT/IotAssignment/SmartMirror/obj/Debug/net8.0/SmartMirror.sourcelink.json

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SmartMirror.Models;
 
 namespace SmartMirror.Controllers;
 

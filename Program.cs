@@ -1,4 +1,10 @@
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    ApplicationName = typeof(Program).Assembly.FullName,
+    ContentRootPath = Path.GetFullPath(Directory.GetCurrentDirectory()),
+    WebRootPath = "wwwroot",
+    Args = args
+});
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -12,6 +18,10 @@ builder.Services.AddSingleton<ArduinoService>();
 builder.Services.AddHostedService<ArduinoService>(provider => provider.GetService<ArduinoService>());
 
 var app = builder.Build();
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -30,5 +40,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
-

@@ -36,8 +36,8 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Motion</h5>
-                    <p class="card-text" id="motion"></p>
+                    <h5 class="card-title">Light Level</h5>
+                    <p class="card-text" id="lightLevel"></p>
                 </div>
             </div>
         </div>
@@ -48,14 +48,6 @@
                 <div class="card-body">
                     <h5 class="card-title">Temperature Threshold</h5>
                     <p class="card-text" id="tempThresholdDisplay"></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Motion Detection</h5>
-                    <p class="card-text" id="motionEnabledDisplay"></p>
                 </div>
             </div>
         </div>
@@ -79,13 +71,6 @@
             <input type="number" class="form-control" id="tempThresholdInput" name="tempThreshold" max="9999" required>
         </div>
         <div class="mb-3">
-            <label for="motionEnabledInput" class="form-label">Motion Detection</label>
-            <select class="form-select" id="motionEnabledInput" name="motionEnabled">
-                <option value="true">Enabled</option>
-                <option value="false">Disabled</option>
-            </select>
-        </div>
-        <div class="mb-3">
             <label for="updateIntervalInput" class="form-label">Update Interval (seconds)</label>
             <input type="number" class="form-control" id="updateIntervalInput" name="updateInterval" required>
         </div>
@@ -96,9 +81,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     const temperatureElement = document.getElementById('temperature');
-    const motionElement = document.getElementById('motion');
+    const lightLevelElement = document.getElementById('lightLevel');
     const tempThresholdDisplayElement = document.getElementById('tempThresholdDisplay');
-    const motionEnabledDisplayElement = document.getElementById('motionEnabledDisplay');
     const updateIntervalDisplayElement = document.getElementById('updateIntervalDisplay');
     const toggleSettingsButton = document.getElementById('toggleSettings');
     const settingsPane = document.getElementById('settingsPane');
@@ -112,19 +96,17 @@
             .then(data => {
                 const latestData = data[data.length - 1];
                 temperatureElement.textContent = latestData.temperature + ' °C';
-                motionElement.textContent = latestData.motion ? 'Detected' : 'Not Detected';
+                lightLevelElement.textContent = latestData.lightLevel;
             })
             .catch(error => {
                 console.error('Error fetching sensor data:', error);
             });
     }
-
     function fetchSettings() {
         fetch('/api/ConditionalRules')
             .then(response => response.json())
             .then(settings => {
                 tempThresholdDisplayElement.textContent = settings[0].temperatureThreshold + ' °C';
-                motionEnabledDisplayElement.textContent = settings[0].motionEnabled ? 'Enabled' : 'Disabled';
                 updateIntervalDisplayElement.textContent = settings[0].updateInterval / 1000 + ' seconds';
             })
             .catch(error => {
@@ -138,7 +120,6 @@
         const formData = new FormData(settingsForm);
         const settings = {
             temperatureThreshold: parseFloat(formData.get('tempThreshold')),
-            motionEnabled: formData.get('motionEnabled') === 'true',
             updateInterval: parseFloat(formData.get('updateInterval')) * 1000
         };
 

@@ -16,7 +16,7 @@ namespace SmartMirror.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.17");
 
-            modelBuilder.Entity("ConditionalRule", b =>
+            modelBuilder.Entity("SmartMirror.Models.ConditionalRule", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,13 +45,13 @@ namespace SmartMirror.Migrations
                         });
                 });
 
-            modelBuilder.Entity("SensorData", b =>
+            modelBuilder.Entity("SmartMirror.Models.SensorData", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("Motion")
+                    b.Property<int>("LightLevel")
                         .HasColumnType("INTEGER");
 
                     b.Property<float>("Temperature")
